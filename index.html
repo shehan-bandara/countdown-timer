@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple responsive countdown timer." />
+  <title>Countdown to the Future</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="hero" id="hero">
+    <div class="overlay"></div>
+
+    <section class="content" id="content" aria-label="Countdown timer">
+      <p class="eyebrow">COUNTDOWN TIMER</p>
+      <h1>THE FUTURE BEGINS NOW</h1>
+
+      <div class="timer" aria-live="polite">
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>DAYS</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>HOURS</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>MINUTES</small>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>SECONDS</small>
+        </div>
+      </div>
+
+      <p id="status" class="status"></p>
+
+      <div class="controls">
+        <label for="targetDate">Choose a target date and time</label>
+        <div class="input-row">
+          <input id="targetDate" type="datetime-local" />
+          <button id="startBtn" type="button">START COUNTDOWN</button>
+        </div>
+
+        <!-- Interactive Calendar Picker -->
+        <div class="calendar-wrapper">
+          <div class="calendar-header">
+            <button type="button" id="prevMonthBtn" class="cal-nav-btn" aria-label="Previous Month">&lsaquo;</button>
+            <span id="calendarMonthYear" class="cal-month-year"></span>
+            <button type="button" id="nextMonthBtn" class="cal-nav-btn" aria-label="Next Month">&rsaquo;</button>
+          </div>
+          <div class="calendar-weekdays">
+            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+          </div>
+          <div id="calendarDays" class="calendar-days"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
